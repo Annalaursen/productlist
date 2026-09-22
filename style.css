@@ -1,0 +1,17 @@
+.produktliste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  background-color: rgb(244, 235, 235);
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
