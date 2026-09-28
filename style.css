@@ -4,6 +4,12 @@
   gap: 1rem;
 }
 
+.udsolgt {
+  filter: grayscale(1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 article {
   display: grid;
   grid-template-rows: subgrid;
