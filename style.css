@@ -1,38 +1,40 @@
-/* .produktliste {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
 }
 
-.udsolgt {
-  filter: grayscale(1);
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 5;
-  background-color: rgb(255, 255, 255);
-  padding: 1rem;
-}
-
-article:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  background-color: #f5f2f2;
+nav a {
   color: #111;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* INDHOLD */
+
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 30px;
 }
 
 h1 {
@@ -40,15 +42,53 @@ h1 {
   margin: 0 0 10px;
 }
 
+h2 {
+  margin-bottom: 30px;
+}
+
 h3 {
   font-size: 26px;
   margin: 0 0 25px;
-} */
+}
+
+/* KATEGORIER PÅ FORSIDEN */
+
+#catListeContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+#catListeContainer a {
+  background-color: white;
+  color: #111;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 35px 25px;
+
+  border: 1px solid #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#catListeContainer a:hover {
+  background-color: #111;
+  color: white;
+}
+
+/* PRODUKTLISTE */
 
 #productList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 2rem;
+  row-gap: 3rem;
 }
 
 #productList a {
@@ -56,83 +96,54 @@ h3 {
   color: black;
 }
 
+#productList article {
+  background-color: white;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8d8d8;
+}
+
+#productList article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#productList img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#productList h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#productList p {
+  margin: 8px 0;
+}
+
+/* UDSOLGT */
+
 .udsolgt {
   filter: grayscale(1);
   opacity: 0.5;
   pointer-events: none;
 }
 
-article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 5;
-  background-color: rgb(255, 255, 255);
-  padding: 1rem;
-}
-
-article:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  background-color: #f5f2f2;
-  color: #111;
-}
-
-h1 {
-  font-size: 42px;
-  margin: 0 0 10px;
-}
-
-h3 {
-  font-size: 26px;
-  margin: 0 0 25px;
-}
-
-#catListeContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-#catListeContainer a {
-  background-color: #222;
-  color: white;
-  text-decoration: none;
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-#catListeContainer a:hover {
-  background-color: #444;
-  transform: translateY(-4px);
-}
+/* TILBAGE KNAP */
 
 .back-button {
   display: inline-block;
-  margin: 20px 0;
+  margin-bottom: 20px;
+
   color: #111;
   text-decoration: none;
-  font-size: 16px;
   font-weight: bold;
-  background-color: #ffbebe;
-  padding: 10px 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .back-button:hover {
   text-decoration: underline;
-  transform: translateY(-2px);
 }
