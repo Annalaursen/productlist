@@ -147,3 +147,11 @@ h3 {
 .back-button:hover {
   text-decoration: underline;
 }
+
+/* FILTRERING */
+
+.filtre {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
